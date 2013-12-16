@@ -1,7 +1,5 @@
 istat4j
 =========
 
-A Java client library for querying the [Linux iStat Server](https://github.com/tiwilliam/istatd).
-The OSX and [Windows iStat Server](https://github.com/bjango/iStat-Server-for-Windows)s are not yet supported.
-iStat provides the ability to remotely monitor your Mac, Windows PC or Linux server, reporting on CPU, Memory, 
-Load and other statistics.
+A Java client library for querying the iStat Server, which provides the ability to remotely monitor your Mac, Windows PC or Linux server. CPU, Memory, Load and other statistics are available. Currently, only the [Linux](https://github.com/tiwilliam/istatd) implementation is supported.
+The OSX and [Windows](https://github.com/bjango/iStat-Server-for-Windows) iStat Servers use a newer version of the protocol, which is not yet supported.
