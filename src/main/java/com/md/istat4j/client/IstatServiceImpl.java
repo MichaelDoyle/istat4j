@@ -87,17 +87,17 @@ public class IstatServiceImpl implements IstatService {
 	}
 	
 	@Override
-	public Telemetry getTelemetry() {
+	public Telemetry getTelemetry() throws IstatException {
 		return getTelemetry(-1);
 	}
 
 	@Override
-	public Telemetry getAllTelemetry() {
+	public Telemetry getAllTelemetry() throws IstatException {
 		return getTelemetry(-2);
 	}
 	
 	@Override
-	public Telemetry getTelemetry(long since) {
+	public Telemetry getTelemetry(long since) throws IstatException {
 		sc.validate();
 		
 		Socket socket = null;
@@ -121,7 +121,8 @@ public class IstatServiceImpl implements IstatService {
 				}
 			}
 		} catch (IOException e) {
-			logger.info("Exception retrieving telemetry from iStat.", e);
+			logger.info("Exception connecting to iStat.", e);
+			throw new IstatException("Connection to iStat failed.", e);
 		} finally {
 			try {
 				if (os != null) {
@@ -141,7 +142,7 @@ public class IstatServiceImpl implements IstatService {
 		return transformTelemetryResponse(reg, tel);
 	}
 	
-	private boolean testConnection(DataOutputStream os, DataInputStream is) {
+	private boolean testConnection(DataOutputStream os, DataInputStream is) throws IstatException {
 		IsrConnectionTestRequest ctr = new IsrConnectionTestRequest();
 		ctr.setConnTest(new IsrConnectionTest());
 		
@@ -150,6 +151,7 @@ public class IstatServiceImpl implements IstatService {
 			serializer.write(ctr, writer);
 		} catch (Exception e) {
 			logger.info("Exception testing connection with iStat.", e);
+			throw new IstatException("Connection test to iStat failed.", e);
 		}
 		
 		IsrConnectionTestResponse response = null;
@@ -159,12 +161,13 @@ public class IstatServiceImpl implements IstatService {
 		    response = getResponse(IsrConnectionTestResponse.class, is);
 		} catch (IOException e) {
 			logger.info("Exception testing connection with iStat.", e);
+			throw new IstatException("Connection test to iStat failed.", e);
 		}
 		
 		return response != null;
 	}
 
-	private IsrRegistrationResponse register(DataOutputStream os, DataInputStream is) {
+	private IsrRegistrationResponse register(DataOutputStream os, DataInputStream is) throws IstatException {
 		IsrRegistrationRequest rr = new IsrRegistrationRequest();
 		rr.setHostname(sc.getClientHostname());
 		rr.setUuid(sc.getClientUuid());
@@ -175,6 +178,7 @@ public class IstatServiceImpl implements IstatService {
 			serializer.write(rr, writer);
 		} catch (Exception e) {
 			logger.info("Exception registering with iStat.", e);
+			throw new IstatException("Registration with iStat failed.", e);
 		}
 		
 		IsrRegistrationResponse response = null;
@@ -184,19 +188,22 @@ public class IstatServiceImpl implements IstatService {
 		    response = getResponse(IsrRegistrationResponse.class, is);
 		} catch (IOException e) {
 			logger.info("Exception registering with iStat.", e);
+			throw new IstatException("Registration with iStat failed.", e);
 		}
 		
 		return response;
 	}
 
-	private boolean authenticate(DataOutputStream os, DataInputStream is) {
+	private boolean authenticate(DataOutputStream os, DataInputStream is) throws IstatException {
 		
 		try {
 			os.write(sc.getServerPassword().getBytes("UTF-8"));
 		} catch (UnsupportedEncodingException e) {
 			logger.info("Exception authenticating with iStat.", e);
+			throw new IstatException("Authentication with iStat failed.", e);
 		} catch (IOException e) {
 			logger.info("Exception authenticating with iStat.", e);
+			throw new IstatException("Authentication with iStat failed.", e);
 		}
 		
 		IsrAuthenticationResponse response = getResponse(IsrAuthenticationResponse.class, is);
@@ -204,7 +211,8 @@ public class IstatServiceImpl implements IstatService {
 		return response != null && response.getReady() == 1;
 	}
 	
-	private IsrTelemetryResponse getTelemetry(DataOutputStream os, DataInputStream is, long since) {
+	private IsrTelemetryResponse getTelemetry(DataOutputStream os, DataInputStream is, long since) 
+			throws IstatException {
 		IsrTelemetryRequest tr = new IsrTelemetryRequest();
 		tr.setRequestId(requestId++);
 		tr.setCpu(since);
@@ -222,6 +230,7 @@ public class IstatServiceImpl implements IstatService {
 			serializer.write(tr, writer);
 		} catch (Exception e) {
 			logger.info("Exception retrieving telemetry from iStat.", e);
+			throw new IstatException("Request to iStat for telemetry failed.", e);
 		}
 		
 		IsrTelemetryResponse response = null;
@@ -231,12 +240,13 @@ public class IstatServiceImpl implements IstatService {
 		    response = getResponse(IsrTelemetryResponse.class, is);
 		} catch (IOException e) {
 			logger.info("Exception retrieving telemetry from iStat.", e);
+			throw new IstatException("Request to iStat for telemetry failed.", e);
 		}
 		
 		return response;
 	}
 	
-	private <T> T getResponse(Class<T> clazz, DataInputStream is) {
+	private <T> T getResponse(Class<T> clazz, DataInputStream is) throws IstatException {
 		String answer = "";
 		
 		try {
@@ -249,6 +259,7 @@ public class IstatServiceImpl implements IstatService {
 			}
 		} catch (IOException e) {
 			logger.info("Exception reading response from iStat", e);
+			throw new IstatException("Failure receiving response from iStat.", e);
 		}
 		
 		logger.debug("Answer from iStat: {}", answer);
@@ -259,6 +270,7 @@ public class IstatServiceImpl implements IstatService {
 			retval = serializer.read(clazz, answer);
 		} catch (Exception e) {
 			logger.info("Exception deserializing XML", e);
+			throw new IstatException("Failure parsing response from iStat.", e);
 		}
 		
 		return retval;

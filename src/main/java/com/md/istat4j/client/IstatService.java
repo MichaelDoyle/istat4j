@@ -36,7 +36,7 @@ public interface IstatService {
 	 * 
 	 * @return The most recent telemetry information
 	 */
-	Telemetry getTelemetry();
+	Telemetry getTelemetry() throws IstatException;
 	
 	/**
 	 * Retrieves all telemetry information from the iStat daemon collected
@@ -45,7 +45,7 @@ public interface IstatService {
 	 * @param since uptime in seconds 
 	 * @return telemetry information collected after the given uptime
 	 */
-	Telemetry getTelemetry(long since);
+	Telemetry getTelemetry(long since) throws IstatException;
 	
 	/**
 	 * Retrieves a baseline of all telemetry information from the iStat daemon.
@@ -55,5 +55,5 @@ public interface IstatService {
 	 * 
 	 * @return all available telemetry information
 	 */
-	Telemetry getAllTelemetry();
+	Telemetry getAllTelemetry() throws IstatException;
 }

@@ -27,6 +27,7 @@ import java.util.Properties;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
+import com.md.istat4j.client.IstatException;
 import com.md.istat4j.client.IstatService;
 import com.md.istat4j.client.IstatServiceFactory;
 import com.md.istat4j.client.ServerConfiguration;
@@ -57,21 +58,21 @@ public class IstatServiceTest {
 	}
 	
 	@Test
-	public void testGetAllTelemetry() {	
+	public void testGetAllTelemetry() throws IstatException {	
 		Telemetry telemetry = service.getAllTelemetry();
 		assertTrue(telemetry.getCpuTelemetry().size() >= 1);
 		assertTrue(telemetry.getNetworkTelemetry().size() >= 1);
 	}
 	
 	@Test
-	public void testGetTelemetry() {	
+	public void testGetTelemetry() throws IstatException {	
 		Telemetry telemetry = service.getTelemetry();
 		assertTrue(telemetry.getCpuTelemetry().size() == 1);
 		assertTrue(telemetry.getNetworkTelemetry().size() == 1);
 	}
 	
 	@Test
-	public void testGetTelemetry_since() {	
+	public void testGetTelemetry_since() throws IstatException {	
 		Telemetry telemetry = service.getTelemetry(-1);
 		assertTrue(telemetry.getCpuTelemetry().size() == 1);
 		assertTrue(telemetry.getNetworkTelemetry().size() == 1);
