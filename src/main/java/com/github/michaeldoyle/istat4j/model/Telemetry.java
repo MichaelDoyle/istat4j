@@ -114,9 +114,9 @@ public class Telemetry {
 	}
 	
 	public String getDisplayUptime() {
-		long day = TimeUnit.MINUTES.toDays(uptime);        
-		long hours = TimeUnit.MINUTES.toHours(uptime) - (day * 24);
-		long minute = TimeUnit.MINUTES.toMinutes(uptime) - (TimeUnit.MINUTES.toHours(uptime) * 60);
+		long day = TimeUnit.SECONDS.toDays(uptime);        
+		long hours = TimeUnit.SECONDS.toHours(uptime) - (day * 24);
+		long minute = TimeUnit.SECONDS.toMinutes(uptime) - (TimeUnit.SECONDS.toHours(uptime) * 60);
 		return day + " days, " + hours + " hours, " + minute + " minutes";
 	}
 }
