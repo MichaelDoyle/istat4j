@@ -16,8 +16,10 @@
 package com.github.michaeldoyle.istat4j.model.xml.v1;
 
 import org.simpleframework.xml.Element;
+import org.simpleframework.xml.Order;
 import org.simpleframework.xml.Root;
 
+@Order(elements={"rid"})
 @Root(name="isr", strict=false)
 public class IsrTelemetryRequest {
 	

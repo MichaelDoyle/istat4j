@@ -157,7 +157,8 @@ public class IstatServiceImpl implements IstatService {
 		IsrConnectionTestResponse response = null;
 		
 		try {
-			os.write(writer.toString().replace("\n", "").getBytes());
+			os.write(writer.toString().replace("\n", "").getBytes("UTF-8"));
+			os.flush();
 		    response = getResponse(IsrConnectionTestResponse.class, is);
 		} catch (IOException e) {
 			logger.info("Exception testing connection with iStat.", e);
@@ -184,7 +185,8 @@ public class IstatServiceImpl implements IstatService {
 		IsrRegistrationResponse response = null;
 		
 		try {
-			os.write(writer.toString().replace("\n", "").getBytes());
+			os.write(writer.toString().replace("\n", "").getBytes("UTF-8"));
+			os.flush();
 		    response = getResponse(IsrRegistrationResponse.class, is);
 		} catch (IOException e) {
 			logger.info("Exception registering with iStat.", e);
@@ -198,6 +200,7 @@ public class IstatServiceImpl implements IstatService {
 		
 		try {
 			os.write(sc.getServerPassword().getBytes("UTF-8"));
+			os.flush();
 		} catch (UnsupportedEncodingException e) {
 			logger.info("Exception authenticating with iStat.", e);
 			throw new IstatException("Authentication with iStat failed.", e);
@@ -236,7 +239,8 @@ public class IstatServiceImpl implements IstatService {
 		IsrTelemetryResponse response = null;
 		
 		try {
-			os.write(writer.toString().replace("\n", "").getBytes());
+			os.write(writer.toString().replace("\n", "").getBytes("UTF-8"));
+			os.flush();
 		    response = getResponse(IsrTelemetryResponse.class, is);
 		} catch (IOException e) {
 			logger.info("Exception retrieving telemetry from iStat.", e);
@@ -258,7 +262,7 @@ public class IstatServiceImpl implements IstatService {
 				}
 			}
 		} catch (IOException e) {
-			logger.info("Exception reading response from iStat", e);
+			logger.info("Exception reading response from iStat.", e);
 			throw new IstatException("Failure receiving response from iStat.", e);
 		}
 		
