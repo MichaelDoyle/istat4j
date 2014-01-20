@@ -50,7 +50,7 @@ public class ModelDeserializationTest {
 	@Test
 	public void testConnectionTestResponse() throws Exception {
 		InputStream in = this.getClass().getClassLoader()
-				.getResourceAsStream("xml/connectionTestResponse.xml");
+				.getResourceAsStream("xml/v1/connectionTestResponse.xml");
 
 		IsrConnectionTestResponse response = serializer.read(
 				IsrConnectionTestResponse.class, in);
@@ -61,7 +61,7 @@ public class ModelDeserializationTest {
 	@Test
 	public void testRegistrationResponse() throws Exception {
 		InputStream in = this.getClass().getClassLoader()
-				.getResourceAsStream("xml/registrationResponse.xml");
+				.getResourceAsStream("xml/v1/registrationResponse.xml");
 
 		IsrRegistrationResponse response = serializer.read(
 				IsrRegistrationResponse.class, in);
@@ -76,7 +76,7 @@ public class ModelDeserializationTest {
 	@Test
 	public void testAuthorizationResponse() throws Exception {
 		InputStream in = this.getClass().getClassLoader()
-				.getResourceAsStream("xml/authorizationResponse.xml");
+				.getResourceAsStream("xml/v1/authorizationResponse.xml");
 
 		IsrAuthenticationResponse response = serializer.read(
 				IsrAuthenticationResponse.class, in);
@@ -87,7 +87,7 @@ public class ModelDeserializationTest {
 	@Test
 	public void testTelemetryResponse() throws Exception {
 		InputStream in = this.getClass().getClassLoader()
-				.getResourceAsStream("xml/telemetryResponse.xml");
+				.getResourceAsStream("xml/v1/telemetryResponse.xml");
 
 		IsrTelemetryResponse response = serializer.read(IsrTelemetryResponse.class,
 				in);

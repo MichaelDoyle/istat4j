@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<isr>
+	<stat type="cpu" interval="0" id="2362" sessionID="1387844236">
+		<s id="-1" u="3.52" s="7.03" n="0.00" t="1387846600.086774" />
+	</stat>
+	<stat type="cpu" interval="1" id="132346" sessionID="1387844236">
+		<s id="-1" u="6.05" s="8.35" n="0.00" t="1387846596" />
+	</stat>
+	<stat type="cpu" interval="2" id="12464" sessionID="1387844236">
+		<s id="-1" u="5.71" s="7.41" n="0.00" t="1387846590" />
+	</stat>
+	<stat type="memory" interval="0" id="2362" sessionID="1387844236">
+		<s to="8192" pi="2319147" t="1387846600.086879" su="0" id="-1" po="0"
+			i="1330.9453125" a="3563.125" w="1637.0625" f="1657.90625" st="1048576" />
+	</stat>
+	<stat type="memory" interval="1" id="132343" sessionID="1387844236">
+		<s to="8192" pi="2319146" t="1387846596" su="0" id="-1" po="0"
+			i="1330.94140625" a="3548.87109375" w="1654.545572916667" f="1655.155598958333"
+			st="1048576" />
+	</stat>
+	<stat type="memory" interval="2" id="12464" sessionID="1387844236">
+		<s to="8192" pi="2319129.4375" t="1387846590" su="0" id="-1" po="0"
+			i="1330.661404079861" a="3549.885145399306" w="1637.228597005208" f="1672.289523654514"
+			st="1048576" />
+	</stat>
+	<stat type="network" interval="0" id="2362" sessionID="1">
+		<item name="Wi-Fi" ip="192.168.1.109" uuid="A7FCA3F9-FF6A-49F6-ACF8-9BCD652CF9D9">
+			<s d="979623817" id="-1" u="94564527" t="1387846600.087003" />
+		</item>
+	</stat>
+	<stat type="network" interval="1" id="132329" sessionID="1">
+		<item name="Wi-Fi" ip="192.168.1.109" uuid="A7FCA3F9-FF6A-49F6-ACF8-9BCD652CF9D9">
+			<s d="1801" id="-1" u="89" t="1387846597.098582" />
+		</item>
+	</stat>
+	<stat type="network" interval="2" id="12464" sessionID="1">
+		<item name="Wi-Fi" ip="192.168.1.109" uuid="A7FCA3F9-FF6A-49F6-ACF8-9BCD652CF9D9">
+			<s d="2981" id="-1" u="745" t="1387846591.090359" />
+		</item>
+	</stat>
+	<stat type="disks" interval="0" id="67" sessionID="1387844240">
+		<item bsd="disk0s2" name="Macintosh HD" uuid="D816971C-8D20-380C-BC7C-9EDF54010979">
+			<s t="1387846591.090642" p="27" u="128500" s="476120" id="-1" f="347620" />
+		</item>
+		<item bsd="MobileBackups" name="" uuid="file:///Volumes/MobileBackups/">
+			<s t="1387846591.093572" p="100" u="476120" s="476120" id="-1" f="0" />
+		</item>
+	</stat>
+	<stat type="disks" interval="1" id="132310" sessionID="1387844240">
+		<item bsd="disk0s2" name="Macintosh HD" uuid="D816971C-8D20-380C-BC7C-9EDF54010979">
+			<s t="0" p="27" u="128500" s="476120" id="-1" f="347620" />
+		</item>
+		<item bsd="MobileBackups" name="" uuid="file:///Volumes/MobileBackups/">
+			<s t="0" p="0" id="-1" u="0" empty="1E0" s="0" f="0" />
+		</item>
+	</stat>
+	<stat type="disks" interval="2" id="12463" sessionID="1387844240">
+		<item bsd="disk0s2" name="Macintosh HD" uuid="D816971C-8D20-380C-BC7C-9EDF54010979">
+			<s t="0" p="27" u="128500" s="476120" id="-1" f="347620" />
+		</item>
+		<item bsd="MobileBackups" name="" uuid="file:///Volumes/MobileBackups/">
+			<s t="0" p="0" id="-1" u="0" empty="1E0" s="0" f="0" />
+		</item>
+	</stat>
+	<stat type="sensors" interval="0" id="393" sessionID="1387844236">
+		<item i="6" n="Airflow" type="0" uuid="TA0P">
+			<s p="0.61" id="-1" v="43.75" t="1387846597.089044" />
+		</item>
+		<item i="8" n="Battery TS1" type="0" uuid="TB1T">
+			<s p="0.52" id="-1" v="35.90" t="1387846597.089454" />
+		</item>
+		<item i="9" n="Battery TS2" type="0" uuid="TB2T">
+			<s p="0.49" id="-1" v="34.50" t="1387846597.089731" />
+		</item>
+		<item i="7" n="Battery TS_MAX" type="0" uuid="TB0T">
+			<s p="0.52" id="-1" v="35.90" t="1387846597.089999" />
+		</item>
+		<item i="11" n="CPU Core - PECI" type="0" uuid="TCXC">
+			<s p="0.56" id="-1" v="62.81" t="1387846597.090385" />
+		</item>
+		<item i="23" n="CPU Core 1 - DTS" type="0" uuid="TC1C">
+			<s p="0.53" id="-1" v="63.00" t="1387846597.09064" />
+		</item>
+		<item i="24" n="CPU Core 2 - DTS" type="0" uuid="TC2C">
+			<s p="0.50" id="-1" v="60.00" t="1387846597.090933" />
+		</item>
+		<item i="10" n="CPU Proximity" type="0" uuid="TC0P">
+			<s p="0.52" id="-1" v="54.25" t="1387846597.091254" />
+		</item>
+		<item i="13" n="Fin Stack" type="0" uuid="Th1H">
+			<s p="0.53" id="-1" v="46.88" t="1387846597.091528" />
+		</item>
+		<item i="12" n="Memory Proximity" type="0" uuid="TM0P">
+			<s p="0.58" id="-1" v="42.00" t="1387846597.091822" />
+		</item>
+		<item i="14" n="Palm Rest" type="0" uuid="Ts0P">
+			<s p="0.59" id="-1" v="33.44" t="1387846597.092087" />
+		</item>
+		<item i="25" n="Exhaust" type="2" uuid="F0Ac">
+			<s p="0.00" id="-1" v="2001.00" t="1387846597.092419" />
+		</item>
+		<item i="17" n="AXG VCore" type="3" uuid="VN0C">
+			<s p="0.04" id="-1" v="0.07" t="1387846597.092674" />
+		</item>
+		<item i="15" n="CPU VCore" type="3" uuid="VC0C">
+			<s p="0.28" id="-1" v="0.83" t="1387846597.092927" />
+		</item>
+		<item i="16" n="DC In" type="3" uuid="VD0R">
+			<s p="0.81" id="-1" v="17.05" t="1387846597.093264" />
+		</item>
+		<item i="18" n="P-Bus" type="3" uuid="VP0R">
+			<s p="0.62" id="-1" v="12.58" t="1387846597.093528" />
+		</item>
+		<item i="5" n="Charger BMON" type="4" uuid="IPBR">
+			<s p="0.02" id="-1" v="0.17" t="1387846597.093786" />
+		</item>
+		<item i="1" n="CPU (Core/AXG/DDR3/IO/SA)" type="4" uuid="IC0R">
+			<s p="0.04" id="-1" v="0.76" t="1387846597.09405" />
+		</item>
+		<item i="2" n="DC In" type="4" uuid="ID0R">
+			<s p="0.19" id="-1" v="0.88" t="1387846597.094473" />
+		</item>
+		<item i="3" n="DD3 1.5V" type="4" uuid="IM0C">
+			<s p="0.08" id="-1" v="0.75" t="1387846597.094723" />
+		</item>
+		<item i="4" n="Other (5V, 3.3V)" type="4" uuid="IO0R">
+			<s p="0.04" id="-1" v="0.33" t="1387846597.094984" />
+		</item>
+		<item i="20" n="CPU Package Core" type="5" uuid="PCPC">
+			<s p="0.13" id="-1" v="4.32" t="1387846597.095273" />
+		</item>
+		<item i="21" n="CPU Package Gfx" type="5" uuid="PCPG">
+			<s p="0.01" id="-1" v="0.20" t="1387846597.095556" />
+		</item>
+		<item i="22" n="CPU Package Total" type="5" uuid="PCPT">
+			<s p="0.13" id="-1" v="7.01" t="1387846597.095817" />
+		</item>
+		<item i="19" n="Ambient Light" type="7" uuid="ALSL">
+			<s p="0.22" id="-1" v="22.00" t="1387846597.096058" />
+		</item>
+	</stat>
+	<stat type="sensors" interval="1" id="132325" sessionID="1387844236">
+		<item i="6" n="Airflow" type="0" uuid="TA0P">
+			<s p="0.61" id="-1" v="43.75" t="1387846597.097946" />
+		</item>
+		<item i="8" n="Battery TS1" type="0" uuid="TB1T">
+			<s p="0.52" id="-1" v="35.90" t="1387846597.097951" />
+		</item>
+		<item i="9" n="Battery TS2" type="0" uuid="TB2T">
+			<s p="0.49" id="-1" v="34.50" t="1387846597.097954" />
+		</item>
+		<item i="7" n="Battery TS_MAX" type="0" uuid="TB0T">
+			<s p="0.52" id="-1" v="35.90" t="1387846597.097958" />
+		</item>
+		<item i="11" n="CPU Core - PECI" type="0" uuid="TCXC">
+			<s p="0.56" id="-1" v="62.81" t="1387846597.097962" />
+		</item>
+		<item i="23" n="CPU Core 1 - DTS" type="0" uuid="TC1C">
+			<s p="0.53" id="-1" v="63.00" t="1387846597.097966" />
+		</item>
+		<item i="24" n="CPU Core 2 - DTS" type="0" uuid="TC2C">
+			<s p="0.50" id="-1" v="60.00" t="1387846597.097969" />
+		</item>
+		<item i="10" n="CPU Proximity" type="0" uuid="TC0P">
+			<s p="0.52" id="-1" v="54.25" t="1387846597.097973" />
+		</item>
+		<item i="13" n="Fin Stack" type="0" uuid="Th1H">
+			<s p="0.53" id="-1" v="46.88" t="1387846597.097976" />
+		</item>
+		<item i="12" n="Memory Proximity" type="0" uuid="TM0P">
+			<s p="0.58" id="-1" v="42.00" t="1387846597.09798" />
+		</item>
+		<item i="14" n="Palm Rest" type="0" uuid="Ts0P">
+			<s p="0.59" id="-1" v="33.44" t="1387846597.097983" />
+		</item>
+		<item i="25" n="Exhaust" type="2" uuid="F0Ac">
+			<s p="0.00" id="-1" v="2001.00" t="1387846597.097987" />
+		</item>
+		<item i="17" n="AXG VCore" type="3" uuid="VN0C">
+			<s p="0.04" id="-1" v="0.07" t="1387846597.097991" />
+		</item>
+		<item i="15" n="CPU VCore" type="3" uuid="VC0C">
+			<s p="0.28" id="-1" v="0.83" t="1387846597.097994" />
+		</item>
+		<item i="16" n="DC In" type="3" uuid="VD0R">
+			<s p="0.81" id="-1" v="17.05" t="1387846597.097997" />
+		</item>
+		<item i="18" n="P-Bus" type="3" uuid="VP0R">
+			<s p="0.62" id="-1" v="12.58" t="1387846597.098" />
+		</item>
+		<item i="5" n="Charger BMON" type="4" uuid="IPBR">
+			<s p="0.02" id="-1" v="0.17" t="1387846597.098004" />
+		</item>
+		<item i="1" n="CPU (Core/AXG/DDR3/IO/SA)" type="4" uuid="IC0R">
+			<s p="0.04" id="-1" v="0.76" t="1387846597.098007" />
+		</item>
+		<item i="2" n="DC In" type="4" uuid="ID0R">
+			<s p="0.19" id="-1" v="0.88" t="1387846597.098011" />
+		</item>
+		<item i="3" n="DD3 1.5V" type="4" uuid="IM0C">
+			<s p="0.08" id="-1" v="0.75" t="1387846597.098014" />
+		</item>
+		<item i="4" n="Other (5V, 3.3V)" type="4" uuid="IO0R">
+			<s p="0.04" id="-1" v="0.33" t="1387846597.098017" />
+		</item>
+		<item i="20" n="CPU Package Core" type="5" uuid="PCPC">
+			<s p="0.13" id="-1" v="4.32" t="1387846597.098021" />
+		</item>
+		<item i="21" n="CPU Package Gfx" type="5" uuid="PCPG">
+			<s p="0.01" id="-1" v="0.20" t="1387846597.098024" />
+		</item>
+		<item i="22" n="CPU Package Total" type="5" uuid="PCPT">
+			<s p="0.13" id="-1" v="7.01" t="1387846597.098028" />
+		</item>
+		<item i="19" n="Ambient Light" type="7" uuid="ALSL">
+			<s p="0.22" id="-1" v="22.00" t="1387846597.098031" />
+		</item>
+	</stat>
+	<stat type="sensors" interval="2" id="12464" sessionID="1387844236">
+		<item i="6" n="Airflow" type="0" uuid="TA0P">
+			<s p="0.61" id="-1" v="43.72" t="1387846591.091134" />
+		</item>
+		<item i="8" n="Battery TS1" type="0" uuid="TB1T">
+			<s p="0.52" id="-1" v="35.90" t="1387846591.091138" />
+		</item>
+		<item i="9" n="Battery TS2" type="0" uuid="TB2T">
+			<s p="0.49" id="-1" v="34.50" t="1387846591.091142" />
+		</item>
+		<item i="7" n="Battery TS_MAX" type="0" uuid="TB0T">
+			<s p="0.52" id="-1" v="35.90" t="1387846591.091145" />
+		</item>
+		<item i="11" n="CPU Core - PECI" type="0" uuid="TCXC">
+			<s p="0.56" id="-1" v="62.70" t="1387846591.091148" />
+		</item>
+		<item i="23" n="CPU Core 1 - DTS" type="0" uuid="TC1C">
+			<s p="0.53" id="-1" v="63.00" t="1387846591.091152" />
+		</item>
+		<item i="24" n="CPU Core 2 - DTS" type="0" uuid="TC2C">
+			<s p="0.50" id="-1" v="61.00" t="1387846591.091155" />
+		</item>
+		<item i="10" n="CPU Proximity" type="0" uuid="TC0P">
+			<s p="0.52" id="-1" v="54.47" t="1387846591.091159" />
+		</item>
+		<item i="13" n="Fin Stack" type="0" uuid="Th1H">
+			<s p="0.53" id="-1" v="46.97" t="1387846591.091162" />
+		</item>
+		<item i="12" n="Memory Proximity" type="0" uuid="TM0P">
+			<s p="0.58" id="-1" v="42.00" t="1387846591.091165" />
+		</item>
+		<item i="14" n="Palm Rest" type="0" uuid="Ts0P">
+			<s p="0.59" id="-1" v="33.39" t="1387846591.091168" />
+		</item>
+		<item i="25" n="Exhaust" type="2" uuid="F0Ac">
+			<s p="0.00" id="-1" v="2001.25" t="1387846591.091172" />
+		</item>
+		<item i="17" n="AXG VCore" type="3" uuid="VN0C">
+			<s p="0.04" id="-1" v="0.10" t="1387846591.091175" />
+		</item>
+		<item i="15" n="CPU VCore" type="3" uuid="VC0C">
+			<s p="0.28" id="-1" v="0.79" t="1387846591.091178" />
+		</item>
+		<item i="16" n="DC In" type="3" uuid="VD0R">
+			<s p="0.81" id="-1" v="17.08" t="1387846591.091181" />
+		</item>
+		<item i="18" n="P-Bus" type="3" uuid="VP0R">
+			<s p="0.62" id="-1" v="12.58" t="1387846591.091184" />
+		</item>
+		<item i="5" n="Charger BMON" type="4" uuid="IPBR">
+			<s p="0.02" id="-1" v="0.17" t="1387846591.091187" />
+		</item>
+		<item i="1" n="CPU (Core/AXG/DDR3/IO/SA)" type="4" uuid="IC0R">
+			<s p="0.04" id="-1" v="0.62" t="1387846591.09119" />
+		</item>
+		<item i="2" n="DC In" type="4" uuid="ID0R">
+			<s p="0.19" id="-1" v="0.77" t="1387846591.091193" />
+		</item>
+		<item i="3" n="DD3 1.5V" type="4" uuid="IM0C">
+			<s p="0.08" id="-1" v="0.68" t="1387846591.091197" />
+		</item>
+		<item i="4" n="Other (5V, 3.3V)" type="4" uuid="IO0R">
+			<s p="0.04" id="-1" v="0.31" t="1387846591.091199" />
+		</item>
+		<item i="20" n="CPU Package Core" type="5" uuid="PCPC">
+			<s p="0.13" id="-1" v="2.82" t="1387846591.091202" />
+		</item>
+		<item i="21" n="CPU Package Gfx" type="5" uuid="PCPG">
+			<s p="0.01" id="-1" v="0.34" t="1387846591.091206" />
+		</item>
+		<item i="22" n="CPU Package Total" type="5" uuid="PCPT">
+			<s p="0.13" id="-1" v="5.62" t="1387846591.091208" />
+		</item>
+		<item i="19" n="Ambient Light" type="7" uuid="ALSL">
+			<s p="0.22" id="-1" v="24.50" t="1387846591.091211" />
+		</item>
+	</stat>
+	<stat type="diskactivity" interval="0" id="2361" sessionID="1387844236">
+		<item bsd="disk0" uuid="X2TZCNBIT">
+			<s t="1387846600.087119" id="-1" empty="1E0" r="10183066624" rIOPS="371918"
+				w="12286507520" wIOPS="450299" />
+		</item>
+	</stat>
+	<stat type="diskactivity" interval="1" id="132327" sessionID="1387844236">
+		<item bsd="disk0" uuid="X2TZCNBIT">
+			<s r="14418" w="1212391" t="1387846597.098519" id="-1" rIOPS="4"
+				wIOPS="21" />
+		</item>
+	</stat>
+	<stat type="diskactivity" interval="2" id="12464" sessionID="1387844236">
+		<item bsd="disk0" uuid="X2TZCNBIT">
+			<s r="7888" w="115809" t="1387846591.091626" id="-1" rIOPS="2"
+				wIOPS="9" />
+		</item>
+	</stat>
+	<stat type="uptime">
+		<s u="163764.58" />
+	</stat>
+</isr>

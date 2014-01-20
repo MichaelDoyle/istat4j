@@ -251,27 +251,12 @@ public class IstatServiceImpl implements IstatService {
 	}
 	
 	private <T> T getResponse(Class<T> clazz, DataInputStream is) throws IstatException {
-		String answer = "";
-		
-		try {
-			while (true) {
-				byte b = is.readByte();
-				answer += (char) b;
-				if (answer.endsWith("</isr>")) {
-					break;
-				}
-			}
-		} catch (IOException e) {
-			logger.info("Exception reading response from iStat.", e);
-			throw new IstatException("Failure receiving response from iStat.", e);
-		}
-		
-		logger.debug("Answer from iStat: {}", answer);
+		logger.debug("Reading response from iStat");
 		
 		T retval = null;
 		
 		try {
-			retval = serializer.read(clazz, answer);
+			retval = serializer.read(clazz, is);
 		} catch (Exception e) {
 			logger.info("Exception deserializing XML", e);
 			throw new IstatException("Failure parsing response from iStat.", e);

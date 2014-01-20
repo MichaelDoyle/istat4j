@@ -1,0 +1,9 @@
+<isr>
+	<stat type="cpu" samples="-1|-1|-1" />
+	<stat type="memory" samples="-1|-1|-1" />
+	<stat type="sensors" samples="-1|-1|-1" />
+	<stat type="network" samples="-1|-1|-1" />
+	<stat type="disks" samples="-1|-1|-1" />
+	<stat type="diskactivity" samples="-1|-1|-1" />
+	<stat type="uptime" samples="-1" />
+</isr>
