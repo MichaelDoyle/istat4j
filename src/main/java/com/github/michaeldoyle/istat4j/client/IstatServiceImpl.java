@@ -87,17 +87,17 @@ public class IstatServiceImpl implements IstatService {
 	}
 	
 	@Override
-	public Telemetry getTelemetry() throws IstatException {
+	public Telemetry getTelemetry() throws IstatException, IstatUnauthorizedException {
 		return getTelemetry(-1);
 	}
 
 	@Override
-	public Telemetry getAllTelemetry() throws IstatException {
+	public Telemetry getAllTelemetry() throws IstatException, IstatUnauthorizedException {
 		return getTelemetry(-2);
 	}
 	
 	@Override
-	public Telemetry getTelemetry(long since) throws IstatException {
+	public Telemetry getTelemetry(long since) throws IstatException, IstatUnauthorizedException {
 		sc.validate();
 		
 		Socket socket = null;
@@ -118,6 +118,8 @@ public class IstatServiceImpl implements IstatService {
 				reg = register(os, is);
 				if(authenticate(os, is)) {
 					tel = getTelemetry(os, is, since);
+				} else {
+					throw new IstatUnauthorizedException("Incorrect passcode.");
 				}
 			}
 		} catch (IOException e) {

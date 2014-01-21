@@ -21,8 +21,11 @@ import org.simpleframework.xml.Root;
 @Root(name="isr", strict=false)
 public class IsrAuthenticationResponse {
 
-	@Attribute(name="ready", required=true)
+	@Attribute(name="ready", required=false)
 	private int ready;
+	
+	@Attribute(name="athrej", required=false)	
+	private int athrej;
 	
 	public IsrAuthenticationResponse() {
 		// necessary to keep xml deserialization happy
@@ -34,5 +37,13 @@ public class IsrAuthenticationResponse {
 
 	public void setReady(int ready) {
 		this.ready = ready;
+	}
+
+	public int getAthrej() {
+		return athrej;
+	}
+
+	public void setAthrej(int athrej) {
+		this.athrej = athrej;
 	}
 }
