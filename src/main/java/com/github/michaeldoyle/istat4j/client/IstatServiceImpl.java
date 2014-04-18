@@ -333,8 +333,8 @@ public class IstatServiceImpl implements IstatService {
 		for (IsrTelemetryNetwork n : isrTelNet) {
 			TelemetryNetwork net = new TelemetryNetwork();
 			net.setId(n.getId());
-			net.setDownloadKb(n.getDown());
-			net.setUploadKb(n.getUp());
+			net.setDownloadBytes(n.getDown());
+			net.setUploadBytes(n.getUp());
 			net.setTime(new Date(n.getTime()));
 			telemetryNet.add(net);
 		}

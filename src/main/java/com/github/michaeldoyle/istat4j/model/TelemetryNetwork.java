@@ -15,13 +15,14 @@
  */
 package com.github.michaeldoyle.istat4j.model;
 
+import java.math.BigInteger;
 import java.util.Date;
 
 public class TelemetryNetwork {
 	
 	private long id;
-   	private long downloadKb;
-	private long uploadKb;
+   	private BigInteger downloadBytes;
+	private BigInteger uploadBytes;
 	private Date time;
 	
 	public long getId() {
@@ -32,20 +33,20 @@ public class TelemetryNetwork {
 		this.id = id;
 	}
 	
-	public long getDownloadKb() {
-		return downloadKb;
+	public BigInteger getDownloadBytes() {
+		return downloadBytes;
 	}
 	
-	public void setDownloadKb(long downloadKb) {
-		this.downloadKb = downloadKb;
+	public void setDownloadBytes(BigInteger downloadBytes) {
+		this.downloadBytes = downloadBytes;
 	}
 	
-	public long getUploadKb() {
-		return uploadKb;
+	public BigInteger getUploadBytes() {
+		return uploadBytes;
 	}
 	
-	public void setUploadKb(long uploadKb) {
-		this.uploadKb = uploadKb;
+	public void setUploadBytes(BigInteger uploadBytes) {
+		this.uploadBytes = uploadBytes;
 	}
 	
 	public Date getTime() {

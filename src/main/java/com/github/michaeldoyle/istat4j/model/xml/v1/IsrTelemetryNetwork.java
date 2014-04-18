@@ -15,6 +15,8 @@
  */
 package com.github.michaeldoyle.istat4j.model.xml.v1;
 
+import java.math.BigInteger;
+
 import org.simpleframework.xml.Attribute;
 import org.simpleframework.xml.Root;
 
@@ -25,10 +27,10 @@ public class IsrTelemetryNetwork {
 	private long id;
     
 	@Attribute(name="d", required=true)
-	private long down;
+	private BigInteger down;
 	
 	@Attribute(name="u", required=true)
-	private long up;
+	private BigInteger up;
 	
 	@Attribute(name="t", required=true)
 	private long time;
@@ -45,19 +47,19 @@ public class IsrTelemetryNetwork {
 		this.id = id;
 	}
 
-	public long getDown() {
+	public BigInteger getDown() {
 		return down;
 	}
 
-	public void setDown(long down) {
+	public void setDown(BigInteger down) {
 		this.down = down;
 	}
 
-	public long getUp() {
+	public BigInteger getUp() {
 		return up;
 	}
 
-	public void setUp(long up) {
+	public void setUp(BigInteger up) {
 		this.up = up;
 	}
 

@@ -130,7 +130,6 @@ public class IstatServiceTest {
 		properties.load(new FileInputStream(new File(url.getFile())));
 		
 		String hostname = properties.getProperty("istat4j.server.hostname");
-		int port = Integer.parseInt(properties.getProperty("istat4j.server.port"));
 		String password = properties.getProperty("istat4j.server.password");
 		
 		ServerConfiguration sc = new ServerConfiguration(

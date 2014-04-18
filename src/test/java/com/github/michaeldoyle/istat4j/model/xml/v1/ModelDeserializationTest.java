@@ -26,18 +26,6 @@ import org.junit.Test;
 import org.simpleframework.xml.Serializer;
 import org.simpleframework.xml.core.Persister;
 
-import com.github.michaeldoyle.istat4j.model.xml.v1.IsrAuthenticationResponse;
-import com.github.michaeldoyle.istat4j.model.xml.v1.IsrConnectionTestResponse;
-import com.github.michaeldoyle.istat4j.model.xml.v1.IsrDisk;
-import com.github.michaeldoyle.istat4j.model.xml.v1.IsrLoad;
-import com.github.michaeldoyle.istat4j.model.xml.v1.IsrMemory;
-import com.github.michaeldoyle.istat4j.model.xml.v1.IsrNetworkInterface;
-import com.github.michaeldoyle.istat4j.model.xml.v1.IsrRegistrationResponse;
-import com.github.michaeldoyle.istat4j.model.xml.v1.IsrTelemetryCpu;
-import com.github.michaeldoyle.istat4j.model.xml.v1.IsrTelemetryNetwork;
-import com.github.michaeldoyle.istat4j.model.xml.v1.IsrTelemetryResponse;
-import com.github.michaeldoyle.istat4j.model.xml.v1.IsrUptime;
-
 public class ModelDeserializationTest {
 
 	private static Serializer serializer;
