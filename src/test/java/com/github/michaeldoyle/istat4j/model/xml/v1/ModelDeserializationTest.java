@@ -19,6 +19,7 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 
 import java.io.InputStream;
+import java.math.BigInteger;
 import java.util.List;
 
 import org.junit.BeforeClass;
@@ -101,10 +102,10 @@ public class ModelDeserializationTest {
 		assertEquals(300, tni.size());
 
 		IsrTelemetryNetwork tn = tni.get(0);
-		assertEquals(33545899, tn.getDown());
+		assertEquals(BigInteger.valueOf(33545899), tn.getDown());
 		assertEquals(1329, tn.getId());
 		assertEquals(1386127188, tn.getTime());
-		assertEquals(4413428, tn.getUp());
+		assertEquals(BigInteger.valueOf(4413428), tn.getUp());
 
 		List<IsrDisk> disks = response.getDisks();
 		assertEquals(3, disks.size());
