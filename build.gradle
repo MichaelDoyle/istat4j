@@ -7,7 +7,7 @@ defaultTasks 'clean', 'build'
 
 sourceCompatibility = 1.6
 group = 'com.github.michaeldoyle'
-version = '1.0.0-SNAPSHOT'
+version = '1.0.1'
 
 repositories {
 	mavenCentral()
@@ -50,7 +50,7 @@ uploadArchives {
         mavenDeployer {
             beforeDeployment { MavenDeployment deployment -> signing.signPom(deployment) }
 			
-			repository(url:  "${project.version.endsWith('-SNAPSHOT') ? 'https://oss.sonatype.org/content/repositories/snapshots/' : 'https://oss.sonatype.org/service/local/staging/deploy/maven2' }") {
+			repository(url: "${project.version.endsWith('-SNAPSHOT') ? 'https://oss.sonatype.org/content/repositories/snapshots/' : 'https://oss.sonatype.org/service/local/staging/deploy/maven2' }") {
               authentication(userName: sonatypeUsername, password: sonatypePassword)
             }
             
