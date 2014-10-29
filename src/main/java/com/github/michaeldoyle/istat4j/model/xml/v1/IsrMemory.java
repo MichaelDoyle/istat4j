@@ -15,6 +15,8 @@
  */
 package com.github.michaeldoyle.istat4j.model.xml.v1;
 
+import java.math.BigInteger;
+
 import org.simpleframework.xml.Attribute;
 import org.simpleframework.xml.Root;
 
@@ -22,105 +24,105 @@ import org.simpleframework.xml.Root;
 public class IsrMemory {
 
 	@Attribute(name="w", required=true)
-	private long wired;
+	private BigInteger wired;
 	
 	@Attribute(name="a", required=true)
-	private long active;
+	private BigInteger active;
 	
 	@Attribute(name="i", required=true)
-	private long inactive;
+	private BigInteger inactive;
 	
 	@Attribute(name="f", required=true)
-	private long free;
+	private BigInteger free;
 	
 	@Attribute(name="t", required=true)
-	private long total;
+	private BigInteger total;
 	
 	@Attribute(name="su", required=true)
-	private long swapUsed;
+	private BigInteger swapUsed;
 	
 	@Attribute(name="st", required=true)
-	private long swapTotal;
+	private BigInteger swapTotal;
 	
 	@Attribute(name="pi", required=true)
-	private long pageIns;
+	private BigInteger pageIns;
 	
 	@Attribute(name="po", required=true)
-	private long pageOuts;
+	private BigInteger pageOuts;
             
 	public IsrMemory() {
 		// necessary to keep xml deserialization happy
 	}
 
-	public long getWired() {
+	public BigInteger getWired() {
 		return wired;
 	}
 
-	public void setWired(long wired) {
+	public void setWired(BigInteger wired) {
 		this.wired = wired;
 	}
 
-	public long getActive() {
+	public BigInteger getActive() {
 		return active;
 	}
 
-	public void setActive(long active) {
+	public void setActive(BigInteger active) {
 		this.active = active;
 	}
 
-	public long getInactive() {
+	public BigInteger getInactive() {
 		return inactive;
 	}
 
-	public void setInactive(long inactive) {
+	public void setInactive(BigInteger inactive) {
 		this.inactive = inactive;
 	}
 
-	public long getFree() {
+	public BigInteger getFree() {
 		return free;
 	}
 
-	public void setFree(long free) {
+	public void setFree(BigInteger free) {
 		this.free = free;
 	}
 
-	public long getTotal() {
+	public BigInteger getTotal() {
 		return total;
 	}
 
-	public void setTotal(long total) {
+	public void setTotal(BigInteger total) {
 		this.total = total;
 	}
 
-	public long getSwapUsed() {
+	public BigInteger getSwapUsed() {
 		return swapUsed;
 	}
 
-	public void setSwapUsed(long swapUsed) {
+	public void setSwapUsed(BigInteger swapUsed) {
 		this.swapUsed = swapUsed;
 	}
 
-	public long getSwapTotal() {
+	public BigInteger getSwapTotal() {
 		return swapTotal;
 	}
 
-	public void setSwapTotal(long swapTotal) {
+	public void setSwapTotal(BigInteger swapTotal) {
 		this.swapTotal = swapTotal;
 	}
 
-	public long getPageIns() {
+	public BigInteger getPageIns() {
 		return pageIns;
 	}
 
-	public void setPageIns(long pageIns) {
+	public void setPageIns(BigInteger pageIns) {
 		this.pageIns = pageIns;
 	}
 
-	public long getPageOuts() {
+	public BigInteger getPageOuts() {
 		return pageOuts;
 	}
 
-	public void setPageOuts(long pageOuts) {
+	public void setPageOuts(BigInteger pageOuts) {
 		this.pageOuts = pageOuts;
 	}
 }

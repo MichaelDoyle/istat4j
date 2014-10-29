@@ -1,5 +1,5 @@
 /* 
- * Copyright 2013 Michael J Doyle
+ * Copyright 2013-2014 Michael J Doyle
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -15,7 +15,7 @@
  */
 package com.github.michaeldoyle.istat4j.model.xml.v1;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 import java.io.StringWriter;
 
@@ -24,11 +24,6 @@ import org.junit.Test;
 import org.simpleframework.xml.Serializer;
 import org.simpleframework.xml.core.Persister;
 import org.simpleframework.xml.stream.Format;
-
-import com.github.michaeldoyle.istat4j.model.xml.v1.IsrConnectionTest;
-import com.github.michaeldoyle.istat4j.model.xml.v1.IsrConnectionTestRequest;
-import com.github.michaeldoyle.istat4j.model.xml.v1.IsrRegistrationRequest;
-import com.github.michaeldoyle.istat4j.model.xml.v1.IsrTelemetryRequest;
 
 public class ModelSerializationTest {
 

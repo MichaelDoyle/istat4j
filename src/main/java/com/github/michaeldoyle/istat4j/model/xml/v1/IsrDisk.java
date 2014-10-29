@@ -15,6 +15,8 @@
  */
 package com.github.michaeldoyle.istat4j.model.xml.v1;
 
+import java.math.BigInteger;
+
 import org.simpleframework.xml.Attribute;
 import org.simpleframework.xml.Root;
 
@@ -28,7 +30,7 @@ public class IsrDisk {
 	private String name;
 	
 	@Attribute(name="f", required=true)
-	private long free;
+	private BigInteger free;
 	
 	@Attribute(name="p", required=true)
 	private double percentUsed;
@@ -53,11 +55,11 @@ public class IsrDisk {
 		this.name = name;
 	}
 
-	public long getFree() {
+	public BigInteger getFree() {
 		return free;
 	}
 
-	public void setFree(long free) {
+	public void setFree(BigInteger free) {
 		this.free = free;
 	}
 

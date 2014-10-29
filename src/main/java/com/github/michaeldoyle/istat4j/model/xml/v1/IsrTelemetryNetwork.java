@@ -24,7 +24,7 @@ import org.simpleframework.xml.Root;
 public class IsrTelemetryNetwork {
 	
 	@Attribute(name="id", required=true)
-	private long id;
+	private BigInteger id;
     
 	@Attribute(name="d", required=true)
 	private BigInteger down;
@@ -39,11 +39,11 @@ public class IsrTelemetryNetwork {
 		// necessary to keep xml deserialization happy
 	}
 
-	public long getId() {
+	public BigInteger getId() {
 		return id;
 	}
 
-	public void setId(long id) {
+	public void setId(BigInteger id) {
 		this.id = id;
 	}
 

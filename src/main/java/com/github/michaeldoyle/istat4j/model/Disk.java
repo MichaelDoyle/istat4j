@@ -1,5 +1,5 @@
 /* 
- * Copyright 2013 Michael J Doyle
+ * Copyright 2013-2014 Michael J Doyle
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -15,11 +15,13 @@
  */
 package com.github.michaeldoyle.istat4j.model;
 
+import java.math.BigInteger;
+
 public class Disk {
 
 	private String uuid;
    	private String name;
-	private long freeMb;
+	private BigInteger freeMb;
 	private double percentUsed;
 	
 	public String getUuid() {
@@ -38,11 +40,11 @@ public class Disk {
 		this.name = name;
 	}
 	
-	public long getFreeMb() {
+	public BigInteger getFreeMb() {
 		return freeMb;
 	}
 	
-	public void setFreeMb(long freeMb) {
+	public void setFreeMb(BigInteger freeMb) {
 		this.freeMb = freeMb;
 	}
 	

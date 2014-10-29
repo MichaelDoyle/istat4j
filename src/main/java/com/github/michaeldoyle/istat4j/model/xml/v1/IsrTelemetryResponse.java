@@ -15,6 +15,7 @@
  */
 package com.github.michaeldoyle.istat4j.model.xml.v1;
 
+import java.math.BigInteger;
 import java.util.List;
 
 import org.simpleframework.xml.Attribute;
@@ -30,13 +31,13 @@ public class IsrTelemetryResponse {
 	private long requestId;
 	
 	@Attribute(name="ds", required=true)
-	private long diskSid;
+	private BigInteger diskSid;
 	
 	@Attribute(name="ts", required=true)
-	private long tempSid;
+	private BigInteger tempSid;
 	
 	@Attribute(name="fs", required=true)
-	private long fanSid;
+	private BigInteger fanSid;
 	
 	@Path("CPU")
 	@ElementList(entry="c", inline=true, empty=false)
@@ -70,27 +71,27 @@ public class IsrTelemetryResponse {
 		this.requestId = requestId;
 	}
 
-	public long getDiskSid() {
+	public BigInteger getDiskSid() {
 		return diskSid;
 	}
 
-	public void setDiskSid(long diskSid) {
+	public void setDiskSid(BigInteger diskSid) {
 		this.diskSid = diskSid;
 	}
 
-	public long getTempSid() {
+	public BigInteger getTempSid() {
 		return tempSid;
 	}
 
-	public void setTempSid(long tempSid) {
+	public void setTempSid(BigInteger tempSid) {
 		this.tempSid = tempSid;
 	}
 
-	public long getFanSid() {
+	public BigInteger getFanSid() {
 		return fanSid;
 	}
 
-	public void setFanSid(long fanSid) {
+	public void setFanSid(BigInteger fanSid) {
 		this.fanSid = fanSid;
 	}
 

@@ -1,5 +1,5 @@
 /* 
- * Copyright 2013 Michael J Doyle
+ * Copyright 2013-2014 Michael J Doyle
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -15,16 +15,17 @@
  */
 package com.github.michaeldoyle.istat4j.model;
 
+import java.math.BigInteger;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 public class Telemetry {
 
 	private long requestId;
+	private BigInteger diskSid;
+	private BigInteger tempSid;
+	private BigInteger fanSid;
 	private long uptime;
-	private long diskSid;
-	private long tempSid;
-	private long fanSid;
 
 	private Load load;
 	private Memory memory;
@@ -49,27 +50,27 @@ public class Telemetry {
 		this.uptime = uptime;
 	}
 	
-	public long getDiskSid() {
+	public BigInteger getDiskSid() {
 		return diskSid;
 	}
 	
-	public void setDiskSid(long diskSid) {
+	public void setDiskSid(BigInteger diskSid) {
 		this.diskSid = diskSid;
 	}
 	
-	public long getTempSid() {
+	public BigInteger getTempSid() {
 		return tempSid;
 	}
 	
-	public void setTempSid(long tempSid) {
+	public void setTempSid(BigInteger tempSid) {
 		this.tempSid = tempSid;
 	}
 	
-	public long getFanSid() {
+	public BigInteger getFanSid() {
 		return fanSid;
 	}
 	
-	public void setFanSid(long fanSid) {
+	public void setFanSid(BigInteger fanSid) {
 		this.fanSid = fanSid;
 	}
 	

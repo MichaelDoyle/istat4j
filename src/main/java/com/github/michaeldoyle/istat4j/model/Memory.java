@@ -1,5 +1,5 @@
 /* 
- * Copyright 2013 Michael J Doyle
+ * Copyright 2013-2014 Michael J Doyle
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -15,87 +15,89 @@
  */
 package com.github.michaeldoyle.istat4j.model;
 
+import java.math.BigInteger;
+
 public class Memory {
 
-	private long wired;
-	private long active;
-	private long inactive;
-	private long free;
-	private long total;
-	private long swapUsed;
-	private long swapTotal;
-	private long pageIns;
-	private long pageOuts;
+	private BigInteger wired;
+	private BigInteger active;
+	private BigInteger inactive;
+	private BigInteger free;
+	private BigInteger total;
+	private BigInteger swapUsed;
+	private BigInteger swapTotal;
+	private BigInteger pageIns;
+	private BigInteger pageOuts;
 	
-	public long getWired() {
+	public BigInteger getWired() {
 		return wired;
 	}
 
-	public void setWired(long wired) {
+	public void setWired(BigInteger wired) {
 		this.wired = wired;
 	}
 
-	public long getActive() {
+	public BigInteger getActive() {
 		return active;
 	}
 
-	public void setActive(long active) {
+	public void setActive(BigInteger active) {
 		this.active = active;
 	}
 
-	public long getInactive() {
+	public BigInteger getInactive() {
 		return inactive;
 	}
 
-	public void setInactive(long inactive) {
+	public void setInactive(BigInteger inactive) {
 		this.inactive = inactive;
 	}
 
-	public long getFree() {
+	public BigInteger getFree() {
 		return free;
 	}
 
-	public void setFree(long free) {
+	public void setFree(BigInteger free) {
 		this.free = free;
 	}
 
-	public long getTotal() {
+	public BigInteger getTotal() {
 		return total;
 	}
 
-	public void setTotal(long total) {
+	public void setTotal(BigInteger total) {
 		this.total = total;
 	}
 
-	public long getSwapUsed() {
+	public BigInteger getSwapUsed() {
 		return swapUsed;
 	}
 
-	public void setSwapUsed(long swapUsed) {
+	public void setSwapUsed(BigInteger swapUsed) {
 		this.swapUsed = swapUsed;
 	}
 
-	public long getSwapTotal() {
+	public BigInteger getSwapTotal() {
 		return swapTotal;
 	}
 
-	public void setSwapTotal(long swapTotal) {
+	public void setSwapTotal(BigInteger swapTotal) {
 		this.swapTotal = swapTotal;
 	}
 
-	public long getPageIns() {
+	public BigInteger getPageIns() {
 		return pageIns;
 	}
 
-	public void setPageIns(long pageIns) {
+	public void setPageIns(BigInteger pageIns) {
 		this.pageIns = pageIns;
 	}
 
-	public long getPageOuts() {
+	public BigInteger getPageOuts() {
 		return pageOuts;
 	}
 
-	public void setPageOuts(long pageOuts) {
+	public void setPageOuts(BigInteger pageOuts) {
 		this.pageOuts = pageOuts;
 	}
 }

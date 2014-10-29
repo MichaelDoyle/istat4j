@@ -7,7 +7,7 @@ defaultTasks 'clean', 'build'
 
 sourceCompatibility = 1.6
 group = 'com.github.michaeldoyle'
-version = '1.0.1'
+version = '1.0.2'
 
 repositories {
 	mavenCentral()

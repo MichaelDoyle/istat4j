@@ -15,6 +15,8 @@
  */
 package com.github.michaeldoyle.istat4j.model.xml.v1;
 
+import java.math.BigInteger;
+
 import org.simpleframework.xml.Attribute;
 import org.simpleframework.xml.Root;
 
@@ -22,7 +24,7 @@ import org.simpleframework.xml.Root;
 public class IsrTelemetryCpu {
 
 	@Attribute(name="id", required=true)
-	private long id;
+	private BigInteger id;
 	
 	@Attribute(name="u", required=true)
 	private int user;
@@ -37,11 +39,11 @@ public class IsrTelemetryCpu {
 		// necessary to keep xml deserialization happy
 	}
 
-	public long getId() {
+	public BigInteger getId() {
 		return id;
 	}
 
-	public void setId(long id) {
+	public void setId(BigInteger id) {
 		this.id = id;
 	}
 

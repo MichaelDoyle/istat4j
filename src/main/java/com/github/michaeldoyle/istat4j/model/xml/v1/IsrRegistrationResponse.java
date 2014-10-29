@@ -15,6 +15,8 @@
  */
 package com.github.michaeldoyle.istat4j.model.xml.v1;
 
+import java.math.BigInteger;
+
 import org.simpleframework.xml.Attribute;
 import org.simpleframework.xml.Root;
 
@@ -31,10 +33,10 @@ public class IsrRegistrationResponse {
 	private int ss;
 	
 	@Attribute(name="c", required=true)
-	private long nextCpuId;
+	private BigInteger nextCpuId;
 	
 	@Attribute(name="n", required=true)
-	private long nextNetworInterfaceId;
+	private BigInteger nextNetworInterfaceId;
 				
 	public IsrRegistrationResponse() {
 		// necessary to keep xml deserialization happy
@@ -64,19 +66,19 @@ public class IsrRegistrationResponse {
 		this.ss = ss;
 	}
 
-	public long getNextCpuId() {
+	public BigInteger getNextCpuId() {
 		return nextCpuId;
 	}
 
-	public void setNextCpuId(long nextCpuId) {
+	public void setNextCpuId(BigInteger nextCpuId) {
 		this.nextCpuId = nextCpuId;
 	}
 
-	public long getNextNetworInterfaceId() {
+	public BigInteger getNextNetworInterfaceId() {
 		return nextNetworInterfaceId;
 	}
 
-	public void setNextNetworInterfaceId(long nextNetworInterfaceId) {
+	public void setNextNetworInterfaceId(BigInteger nextNetworInterfaceId) {
 		this.nextNetworInterfaceId = nextNetworInterfaceId;
 	}
 }

@@ -1,5 +1,5 @@
 /* 
- * Copyright 2013 Michael J Doyle
+ * Copyright 2013-2014 Michael J Doyle
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -58,8 +58,8 @@ public class ModelDeserializationTest {
 		assertEquals(1, response.getAuthorizationRequired());
 		assertEquals(2, response.getPlatform());
 		assertEquals(6, response.getSs());
-		assertEquals(1109946, response.getNextCpuId());
-		assertEquals(1109945, response.getNextNetworInterfaceId());
+		assertEquals(BigInteger.valueOf(1109946), response.getNextCpuId());
+		assertEquals(BigInteger.valueOf(1109945), response.getNextNetworInterfaceId());
 	}
 
 	@Test
@@ -81,16 +81,16 @@ public class ModelDeserializationTest {
 		IsrTelemetryResponse response = serializer.read(IsrTelemetryResponse.class,
 				in);
 
-		assertEquals(0, response.getDiskSid());
-		assertEquals(0, response.getFanSid());
 		assertEquals(1, response.getRequestId());
-		assertEquals(0, response.getTempSid());
+		assertEquals(BigInteger.valueOf(0), response.getDiskSid());
+		assertEquals(BigInteger.valueOf(0), response.getFanSid());
+		assertEquals(BigInteger.valueOf(0), response.getTempSid());
 
 		List<IsrTelemetryCpu> cpu = response.getCpuTelemetry();
 		assertEquals(299, cpu.size());
 
 		IsrTelemetryCpu tc = cpu.get(0);
-		assertEquals(1330, tc.getId());
+		assertEquals(BigInteger.valueOf(1330), tc.getId());
 		assertEquals(0, tc.getNice());
 		assertEquals(1, tc.getSystem());
 		assertEquals(0, tc.getUser());
@@ -102,10 +102,10 @@ public class ModelDeserializationTest {
 		assertEquals(300, tni.size());
 
 		IsrTelemetryNetwork tn = tni.get(0);
+		assertEquals(BigInteger.valueOf(1329), tn.getId());
 		assertEquals(BigInteger.valueOf(33545899), tn.getDown());
-		assertEquals(1329, tn.getId());
-		assertEquals(1386127188, tn.getTime());
 		assertEquals(BigInteger.valueOf(4413428), tn.getUp());
+		assertEquals(1386127188, tn.getTime());
 
 		List<IsrDisk> disks = response.getDisks();
 		assertEquals(3, disks.size());
@@ -116,15 +116,15 @@ public class ModelDeserializationTest {
 		assertEquals(0.69, load.getFifteenMinuteAverage(), 0.0);
 
 		IsrMemory memory = response.getMemory();
-		assertEquals(315, memory.getActive());
-		assertEquals(548, memory.getFree());
-		assertEquals(117, memory.getInactive());
-		assertEquals(0, memory.getPageIns());
-		assertEquals(0, memory.getPageOuts());
-		assertEquals(523, memory.getSwapTotal());
-		assertEquals(0, memory.getSwapUsed());
-		assertEquals(1264, memory.getTotal());
-		assertEquals(283, memory.getWired());
+		assertEquals(BigInteger.valueOf(315), memory.getActive());
+		assertEquals(BigInteger.valueOf(548), memory.getFree());
+		assertEquals(BigInteger.valueOf(117), memory.getInactive());
+		assertEquals(BigInteger.valueOf(0), memory.getPageIns());
+		assertEquals(BigInteger.valueOf(0), memory.getPageOuts());
+		assertEquals(BigInteger.valueOf(523), memory.getSwapTotal());
+		assertEquals(BigInteger.valueOf(0), memory.getSwapUsed());
+		assertEquals(BigInteger.valueOf(1264), memory.getTotal());
+		assertEquals(BigInteger.valueOf(283), memory.getWired());
 
 		IsrUptime uptime = response.getUptime();
 		assertEquals(1628, uptime.getUptime());
